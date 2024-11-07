@@ -2,7 +2,7 @@ package org.example;
 import  java.util.*;
 public class compte {
     banque B;
-    //private client Client;
+    private client Client;
     private String numCompte;
     private Date dateCreation;
     private  Date dateUpdate;
@@ -28,7 +28,9 @@ public class compte {
     public void addTransaction(transaction t) {
         transactions.add(t);
     }
-
+    public client getClient() {
+        return new client(Client.getNumClient(),Client.getNom(),Client.getPrenom(),Client.getNum(),Client.getMail());
+    }
     @Override
     public String toString() {
         return "compte{" +
