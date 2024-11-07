@@ -19,7 +19,15 @@ public class banque {
             comptes.add(c);
         }
     }
-
+    public List<compte> rechercheClientComptes(String Num){
+        List <compte> ClientComptes=new ArrayList<>();
+        for (compte c : comptes){
+            if(c.getClient().getNumClient().equals(Num)){
+                ClientComptes.add(c);
+            }
+        }
+        return ClientComptes;
+    }
     public String getNom() {return Nom;}
     public String getPay() {return pay;}
 }
